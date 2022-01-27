@@ -1,0 +1,85 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+@media (min-width: 1200px) {
+  .container-xl {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-xxl {
+    max-width: 1366px;
+  }
+}
+.container-xl{
+  /* border: 1px solid #000; */
+}
+/* ======GLOBALES========== */
+:root {
+  --neutro-very-dark: #191c1f;
+  --neutro-dark: #4f5559;
+  --neutro-light: #808080;
+  --neutro-very-light: #fefefe;
+  --neutro-background-light: #f0f0f0;
+  --primario-azul-normal: #1575b7;
+  --primario-azul-dark: #0f3a57;
+  --primario-azul-light: #339fea;
+  --secundario-naranja-normal: #df8020;
+  --secundario-naranja-light: #ef8c27;
+  --secundario-rojo-normal: #ad1f1f;
+  --secundario-rojo-light: #d82727;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  /* border: 1px solid red; */
+  min-height: 100vh;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+h1{
+  font-weight: 700;
+}
+svg{
+  /* border: 1px solid #000; */
+}
+/*=====Componentes============*/
+.top-bar{
+  background-color: var(--primario-azul-normal);
+  color: #fff;
+}
+
+
+.contacto{
+  display: flex;
+  align-items: center;
+  /* border: 1px solid white; */
+  margin-right: 3rem;
+  font-size: 14px;
+}
+.contacto__icon{
+  
+  margin-right: .5rem;
+}
+.telefono .contacto__text::before{
+  content: "+51 980 375 729";
+}
+.correo .contacto__text::before{
+  content: "inprodeh@outlook.com";
+}
+.redsocial{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;  
+}
+.redsocial:hover{
+  /* background-color: #062a42; */
+  background-color: var(--primario-azul-dark);
+}
