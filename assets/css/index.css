@@ -3,6 +3,10 @@
 *::before {
   box-sizing: border-box;
 }
+.container-xl,.container-xxl{
+  padding-left: 0;
+  padding-right: 0;
+}
 @media (min-width: 1200px) {
   .container-xl {
     max-width: 1200px;
@@ -17,7 +21,7 @@
 .container-xl{
   /* border: 1px solid #000; */
 }
-/* ======GLOBALES========== */
+/*======================== GLOBALES =====================*/
 :root {
   --neutro-very-dark: #191c1f;
   --neutro-dark: #4f5559;
@@ -31,6 +35,8 @@
   --secundario-naranja-light: #ef8c27;
   --secundario-rojo-normal: #ad1f1f;
   --secundario-rojo-light: #d82727;
+  --height-topbar: 46px;
+  --height-header: 96px;
 }
 
 body{
@@ -38,17 +44,33 @@ body{
   /* border: 1px solid red; */
   min-height: 100vh;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6,.h1{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
-h1{
+h1,.h1{
   font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+h2{
+  font-size: 24px;
+  font-weight: 600;
 }
 svg{
   /* border: 1px solid #000; */
 }
-/*=====Componentes============*/
+img{
+  display: block;  
+  max-height: 100%;
+}
+
+.zindex-10{
+  position: relative;
+  z-index: 10;
+}
+
+/*======================== COMPONENTES =====================*/
 .top-bar{
   background-color: var(--primario-azul-normal);
   color: #fff;
@@ -59,7 +81,7 @@ svg{
   display: flex;
   align-items: center;
   /* border: 1px solid white; */
-  margin-right: 3rem;
+  margin-left: 24px;
   font-size: 14px;
 }
 .contacto__icon{
@@ -74,12 +96,141 @@ svg{
 }
 .redsocial{
   /* border: 1px solid red; */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;  
+  width: 42px;  
 }
-.redsocial:hover{
-  /* background-color: #062a42; */
+.redsocial:hover  { 
   background-color: var(--primario-azul-dark);
+}
+
+/* ==================== Header ===================== */
+header{
+  /* border: 1px solid red; */
+  height: 96px;
+}
+.logo{
+  height: inherit;
+}
+.nav-item + .nav-item{
+  margin-left: 16px !important;
+}
+.nav-link{
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  color: var(--neutro-light) !important;
+  position: relative;
+}
+.nav-link.active{
+  color: var(--secundario-naranja-light) !important;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .nav-link.active{
+    color: var(--neutro-very-dark) !important;
+    font-weight: 400;
+  }
+  .nav-link::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color:  var(--secundario-naranja-light);
+    bottom: 0;
+    left: 0;
+    transform: scale(0);  
+    transition: transform .3s;
+  } 
+  .nav-link:hover::before{
+    transform: scale(1);  
+  }
+  .nav-link.active::before{
+    transform: scale(1);  
+  }
+}
+/*=============== HERO ========================= */
+.hero{
+  /* border: 10px solid red;  */
+  position: relative; 
+  user-select: none;
+}
+.hero::before{
+  /* content: "asd"; */
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.33);
+  z-index: 9;
+}
+.carousel-item{
+  height: calc(100vh - var(--height-topbar) - var(--height-header));
+  max-height: 626px;
+  position: relative;
+}
+.carousel-item img{
+  height: 100% !important;
+  object-fit: cover;
+  position: relative;
+}
+.carousel-item::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(0,0,0,.44);
+  color: #fff;
+}
+.carousel-control-prev, .carousel-control-next {
+  opacity: 1;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  /*border: 1px solid #000;*/
+  /*line-height: 50px;*/
+  height: 30px;
+  width: 30px;
+  /*border-radius: 50px;*/
+}
+.flecha-contenedor{
+ 
+  background-color: rgba(0,0,0,.9);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-caption{
+  top: 20%;
+  z-index: 20;
+  color: var(--neutro-very-light);
+}
+.carousel-indicators{
+  /* position: relative; */
+  z-index: 30;
+}
+.carousel-indicators [data-bs-target] {
+  border-top: none;
+  border-bottom: none;
+  border-radius: 5px;
+  height:8px;
+  background-color: rgba(255, 255, 255, .6) ;
+  opacity: 1;
+}
+.carousel-indicators .active{
+background-color: var(--primario-azul-light);
+  transform: scaleY(1.1);
+  /* transform-origin:center ; */
+}
+.navbar-collapse{
+  z-index: 90;
+  background-color: #fff;
 }
