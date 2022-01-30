@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 .container-xl,.container-xxl{
-  padding-left: 0;
-  padding-right: 0;
+  /* padding-left: 0;
+  padding-right: 0; */
 }
 @media (min-width: 1200px) {
   .container-xl {
@@ -21,7 +21,7 @@
 .container-xl{
   /* border: 1px solid #000; */
 }
-/*======================== GLOBALES =====================*/
+/*======================== RESET Y GLOBALES =====================*/
 :root {
   --neutro-very-dark: #191c1f;
   --neutro-dark: #4f5559;
@@ -37,17 +37,28 @@
   --secundario-rojo-light: #d82727;
   --height-topbar: 46px;
   --height-header: 96px;
+  --color-guionado:var(--primario-azul-light);
 }
 
 body{
   font-family: 'Open Sans', sans-serif;
   /* border: 1px solid red; */
   min-height: 100vh;
+  color: var(--neutro-dark);
 }
 h1,h2,h3,h4,h5,h6,.h1{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  color: var(--neutro-very-dark);
 }
+.texto-claro h2,.texto-claro h3{
+  color: #fff;
+}
+.texto-claro{
+  color: var(--neutro-background-light);
+
+}
+
 h1,.h1{
   font-weight: 700;
   font-size: 2rem;
@@ -55,6 +66,10 @@ h1,.h1{
 }
 h2{
   font-size: 24px;
+  font-weight: 600;
+}
+h3{
+  font-size: 20px;
   font-weight: 600;
 }
 svg{
@@ -69,8 +84,29 @@ img{
   position: relative;
   z-index: 10;
 }
-
-/*======================== COMPONENTES =====================*/
+/*/*======================== UTILITARIOS /*========================*/
+.padding-top-64{
+  padding-top: 64px ;
+}
+.margin-left-24{
+  margin-left: 24px;
+}
+.margin-bottom-64{
+  margin-bottom: 64px !important;
+}
+.margin-bottom-48{
+  margin-bottom: 48px !important;
+}
+.margin-bottom-32{
+  margin-bottom: 32px !important;
+}
+.margin-bottom-24{
+  margin-bottom: 24px !important;
+}
+.margin-bottom-16{
+  margin-bottom: 16px !important;
+}
+/*======================== COMPONENTES /*========================*/
 .top-bar{
   background-color: var(--primario-azul-normal);
   color: #fff;
@@ -81,7 +117,7 @@ img{
   display: flex;
   align-items: center;
   /* border: 1px solid white; */
-  margin-left: 24px;
+ 
   font-size: 14px;
 }
 .contacto__icon{
@@ -211,6 +247,9 @@ header{
 .carousel-caption{
   top: 20%;
   z-index: 20;
+ 
+}
+.carousel-caption h1,.carousel-caption .h1{
   color: var(--neutro-very-light);
 }
 .carousel-indicators{
@@ -233,4 +272,99 @@ background-color: var(--primario-azul-light);
 .navbar-collapse{
   z-index: 90;
   background-color: #fff;
+}
+
+/* ============ Seccion Acerca De ============ */
+/* .secInformativa{
+  padding-top: 64px;
+} */
+
+.guionado{
+  position: relative;
+  /* border: 1px solid red; */
+ 
+}
+.guionado::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 70px;
+  height: 3px;
+  background-color: var(--color-guionado);
+
+}
+
+/* ============ Seccion Trabajo ============ */
+.nuestro-trabajo{
+  --color-guionado: var(--secundario-naranja-normal);
+  background-color: var(--primario-azul-dark);
+  line-height: 1.6;
+}
+
+/* ============ Seccion Frases ============ */
+.comillas{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.lema{
+  font-size: 28px;
+}
+.circulos-list{
+  display: flex;
+  justify-content: space-evenly;
+}
+.circulo{
+
+  /* display: flex; */
+  /* background-color: red; */
+}
+.circulo__img{
+  
+  height: 212px !important;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 6px 2px #bfbfbf;
+  /* box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px; */
+  /* border: 11px solid blue; */
+}
+.circulo__img img{
+  object-fit: cover;
+}
+.circulo__img::after{
+  content: attr(data-texto);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.45);
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: scale(0);
+  transition: transform .4s;
+  font-size: 14px;
+  padding: 0 8px;
+}
+.circulo__img:hover::after{
+  transform: scale(1);
+}
+/* ============ Footer ============ */
+.footer{
+  background-color: var(--neutro-very-dark);
+  font-size: 14px;
+  
+}
+.footer__social{
+  display: flex;
+}
+.footer__social-link + .footer__social-link{
+  margin-left: 16px;
 }
