@@ -1,0 +1,63 @@
+main{
+  margin-top: 64px;
+}
+.bloque-guion-vertical{ 
+  padding:  16px;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #f0f0f0;
+  cursor: pointer;
+   margin-top: 24px;
+}
+
+.bloque-guion-vertical p{
+  color: var(--neutro-dark);
+  font-weight: 600;
+  margin-bottom: 0;
+  /* margin-top: 8px; */
+}
+
+.datos-contacto .row{
+  margin-left: unset;
+  margin-right: unset;
+}
+.fb-container{
+  /* border: 1px solid red; */
+  width: 300px;
+}
+@media screen and (min-width:340px){
+  .fb-container{
+    width: 320px;
+  }
+}
+@media screen and (min-width:370px){
+  .fb-container{  
+    width: 340px;
+  }
+}
+@media screen and (min-width:480px){
+  .fb-container{  
+    width: 420px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

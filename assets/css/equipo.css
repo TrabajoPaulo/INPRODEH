@@ -1,0 +1,48 @@
+.contenedor{
+  background-color: #fff;
+}
+.tarjeta-lista{ 
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
+  row-gap: 28px;
+  column-gap: 8px;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+.card{
+ /* padding: 0 10px;  */
+ /* width: 280px;   */
+  width: 240px;
+  border: none;
+  /* box-shadow: 2px 4px 6px rgba(0,0,0,.15); */
+}
+.card ul{
+  list-style-image: url("../img/check-circle-naranja.png");
+  margin-left: 18px;
+  font-size: 15px;
+}
+.card li + li{
+  margin-top: 4px;
+}
+.card img{
+  /* height: 320px; */
+  height: 301px;
+  object-position: top;
+}
+.card-title{
+  margin-bottom: 0;
+}
+.card-subtitulo{
+  display: block;
+  margin:2px 0 10px  ;
+}
+.card-body{
+  padding: 16px 0;
+}
+.hero-banner .carousel-caption{
+  top:25%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
