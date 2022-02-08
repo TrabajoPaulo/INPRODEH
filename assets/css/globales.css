@@ -47,14 +47,14 @@ body {
   /* border: 1px solid red; */
   min-height: 100vh;
   color: var(--neutro-dark);
-}
-body{
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 footer{
   margin-top: auto;
+}
+p{
+  line-height: 1.7;
 }
 h1,
 h2,
@@ -150,6 +150,9 @@ ul{
 }
 .margin-top-48 {
   margin-top: 48px;
+}
+.margin-top-72 {
+  margin-top: 72px;
 }
 .margin-bottom-70 {
   margin-bottom: 70px !important;
@@ -370,6 +373,46 @@ ul{
     font-weight: 600;
   }
 }
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {  
+  height: 30px;
+  width: 30px; 
+}
+.flecha-contenedor {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.78);
+}
+@media screen and (min-width: 992px) {
+  .flecha-contenedor {
+    transform: scale(1);
+  }
+}
+.carousel-indicators {
+  z-index: 30;
+}
+.carousel-indicators [data-bs-target] {
+  border-top: none;
+  border-bottom: none;
+  border-radius: 2px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+.carousel-indicators .active {
+  background-color: var(--primario-azul-light);
+  transform: scaleY(1.1);
+}
+
 /*#endregion ============/ Hero =================*/
 
 
@@ -391,8 +434,8 @@ ul{
 .footer {
   background-color: var(--neutro-very-dark);
   font-size: 14px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 .footer__social {
   display: flex;

@@ -1,0 +1,65 @@
+.programas .carousel-item::after {
+  content: unset;
+
+  background-color: unset;
+
+}
+.programas .carousel-item {
+  height: unset;
+  
+  
+}
+@media screen and (min-width:768px) {
+  .programas .carousel-item{
+    padding: 32px 92px 48px;
+  }
+}
+.programas .carousel-item img {
+  height: 320px !important;
+  width: 100%;
+  object-position: center top;
+
+
+}
+.programas .carousel-caption {
+  top: unset;
+  position: static;
+  padding: 0;
+  /* margin-bottom: 32px; */
+}
+.programas h3{
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+}
+@media screen and (min-width:768px) {
+  .programas h3{    
+    align-items: center;
+  }
+}
+.programas h4{
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.titulo-circulo{
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  background-color: #000;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.programa__item + .programa__item{
+  margin-top: 32px;
+}
+@media screen and (min-width:768px) {
+  .programa__item + .programa__item{
+    margin-top: unset;
+  }
+}

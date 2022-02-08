@@ -1,43 +1,4 @@
 /*#region ================<SECCION HERO>=================*/
-.carousel-control-prev,
-.carousel-control-next {
-  opacity: 1;
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon {  
-  height: 30px;
-  width: 30px; 
-}
-.flecha-contenedor {
-  background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: scale(0.78);
-}
-@media screen and (min-width: 992px) {
-  .flecha-contenedor {
-    transform: scale(1);
-  }
-}
-.carousel-indicators {
-  z-index: 30;
-}
-.carousel-indicators [data-bs-target] {
-  border-top: none;
-  border-bottom: none;
-  border-radius: 2px;
-  height: 6px;
-  background-color: rgba(255, 255, 255, 0.6);
-  opacity: 1;
-}
-.carousel-indicators .active {
-  background-color: var(--primario-azul-light);
-  transform: scaleY(1.1);
-}
 
 
 /*#endregion ============</SECCION HERO>=================*/
@@ -48,9 +9,40 @@
   --color-guionado: var(--secundario-naranja-normal);
   background-color: var(--primario-azul-dark);
   line-height: 1.6;
+  padding-bottom: 64px;
+}
+.nuestro-trabajo h3{
+  /* white-space:nowrap ; */
+  max-width: 310px;
+  text-align: center;
+  margin: auto;
+  font-weight: 400 !important;
+  color: #eee;
+  font-size: 18px;
+  line-height: 1.4;
+}
+@media screen and (min-width:768px){
+  .nuestro-trabajo .card-lineas-segundo{
+    margin-top: 92px;
+  }
 }
 /*#endregion ============</SECCION TRABAJO>=================*/
 
+/*#region ================SECCION QUE-BUSCAMOS=================*/
+.que-buscamos{
+  /* max-width: 887px ; */
+}
+  .que-buscamos ul{
+    list-style-image: url("../img/check.svg");
+  }
+  .que-buscamos ul li{
+    line-height: 1.7;
+  }
+  .que-buscamos li + li{
+    margin-top: 16px;
+  }
+
+/*#endregion ============/SECCION QUE-BUSCAMOS=================*/
 
 /*#region ================<SECCION FRASES>=================*/
 
@@ -105,5 +97,23 @@
 }
 /*#endregion ============</SECCION FRASES>=================*/
 
-
+/*#region ================SECCION ALIADOS=================*/
+.aliados__list{
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  justify-content: center;
+  justify-items: center;
+  row-gap: 16px;
+  /* flex-wrap: wrap; */
+}
+.aliados__item{
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  /* border: 1px solid blue; */
+}
+/*#endregion ============/SECCION ALIADOS=================*/
 

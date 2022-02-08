@@ -1,5 +1,9 @@
+.que-hacemos{
+  /* --color-guionado: var(--secundario-naranja-normal); */
+  /* background-color: var(--primario-azul-dark); */
+}
 /* ============ Seccion Mision ============= */
-.mision{
+.vision{
   background-color: #f0f0f0;
 }
 
@@ -10,17 +14,34 @@
   background-color: hsl(204,70%,30%);
   color: #fff;
   padding: 12px 30px;
-  margin-top: -78px;
+  /* margin-top: -78px; */
   box-shadow: 4px 4px 6px rgba(0,0,0,.27);
 }
 @media screen and (min-width: 992px){
   .mision h2 , .vision h2{
-    margin-bottom: 64px !important;
+    /* margin-bottom: 64px !important; */
   }
 }
+/*#region ================Seccion Valores=================*/
+.valores{
+  padding-bottom: 72px;
+}
+.valores__item + .valores__item{
+  margin-top: 64px;
+}
+.valores__fila2{
+  margin-top: 64px;
+}
+@media screen and (min-width:768px){
+  .valores__item + .valores__item{
+    margin-top: initial;
+  }
+}
+
 /* ============== Seccion Pdf Registro ================ */
 .pdf-registro{
-  background-color: #f0f0f0;
+  background-color: var(--primario-azul-dark);
+  
 }
 .pdf-registro iframe{
   width: 100%;
@@ -30,8 +51,11 @@
 }
 
 @media screen and (min-width:768px) {
+  .pdf-registro h2{
+    text-transform: uppercase;
+  }
   .pdf-registro iframe{
-    
-    height: 550px;
+    width: 85%;
+    height: 620px;
   }
 }
